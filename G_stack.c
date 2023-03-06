@@ -1,7 +1,7 @@
 #include <assert.h>
 
 #define Stack( stack_type, STACK_SIZE, STACK_OBJ )         \
-struct st_node_##STACK_OBJ {                                                          \
+struct st_node_##STACK_OBJ {                                \                          \
      stack_type stack[ STACK_SIZE ];                      \
      int top_element;                                    \
  };                                                       \
