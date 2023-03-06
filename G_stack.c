@@ -2,8 +2,8 @@
 
 #define Stack( stack_type, STACK_SIZE, STACK_OBJ )         \
 struct st_node_##STACK_OBJ {                                                          \
-   stack_type stack[ STACK_SIZE ];         \
-   int top_element;                   \
+     stack_type stack[ STACK_SIZE ];                      \
+     int top_element;                                    \
  };                                                       \
 struct st_node_##STACK_OBJ STACK_OBJ;                      \
 int STACK_OBJ##_is_empty( void )                           \
@@ -37,15 +37,14 @@ stack_type STACK_OBJ##_top( void )                          \
 #include <stdio.h>
 int main()
 {
-	Stack(int,10,mystack);
+    Stack(int,10,mystack);
     mystack_push(1);
-	mystack_push(2);
+    mystack_push(2);
     Stack(int,10,yourstack);
     yourstack_push(4);
-	yourstack_push(5);
-	yourstack_pop();
-	printf("%d\n", yourstack_top());
-	
-	
+    yourstack_push(5);
+    yourstack_pop();
+    printf("%d\n", yourstack_top());
+		
 }
 
