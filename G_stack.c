@@ -5,7 +5,8 @@ struct st_node_##STACK_OBJ {                                                    
      stack_type stack[ STACK_SIZE ];                      \
      int top_element;                                    \
  };                                                       \
-struct st_node_##STACK_OBJ STACK_OBJ;                      \
+  struct st_node_##STACK_OBJ STACK_OBJ;                      \
+  STACK_OBJ.top_element = -1;                              \
 int STACK_OBJ##_is_empty( void )                           \
 {                                                       \
 return STACK_OBJ.top_element == -1;                       \
